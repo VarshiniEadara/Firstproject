@@ -1,0 +1,19 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  

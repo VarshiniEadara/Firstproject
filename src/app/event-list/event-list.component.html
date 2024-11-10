@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <div *ngIf="loading" class="text-center">
+      <span>Loading events...</span>
+    </div>
+  
+    <div *ngIf="!loading">
+      <h2>Upcoming Events</h2>
+      <div class="row">
+        <div *ngFor="let event of events" class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">{{ event.name }}</h5>
+              <p class="card-text">{{ event.date | date: 'fullDate' }}</p>
+              <p class="card-text">{{ event.location | eventLocation }}</p>
+              <a class="btn btn-info" [routerLink]="['/event', event.id]">View Details</a>
+              <button class="btn btn-danger ml-2" (click)="deleteEvent(event.id)">Delete</button>
+              <button class="btn btn-warning ml-2" (click)="eventUpdate(event)">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <a class="btn btn-primary mt-3" routerLink="/add-event">Add New Event</a>
+    </div>
+  </div>
+  

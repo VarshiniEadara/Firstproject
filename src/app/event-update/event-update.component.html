@@ -1,0 +1,75 @@
+<div class="container mt-3">
+    <h2>Update Event</h2>
+    <form #eventForm="ngForm" (ngSubmit)="eventUpdate(eventForm)" novalidate>
+      <!-- Event Name -->
+      <div class="form-group">
+        <label for="name">Event Name</label>
+        <input
+          id="name"
+          class="form-control"
+          type="text"
+          name="name"
+          [(ngModel)]="event.name"
+          required
+          minlength="3"
+          #name="ngModel"
+        />
+        <div *ngIf="name.invalid && name.touched" class="text-danger">
+          Event Name is required and must be at least 3 characters.
+        </div>
+      </div>
+  
+      <!-- Event Location -->
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input
+          id="location"
+          class="form-control"
+          type="text"
+          name="location"
+          [(ngModel)]="event.location"
+          required
+          #location="ngModel"
+        />
+        <div *ngIf="location.invalid && location.touched" class="text-danger">
+          Location is required.
+        </div>
+      </div>
+  
+      <!-- Event Date -->
+      <div class="form-group">
+        <label for="date">Event Date</label>
+        <input
+          id="date"
+          class="form-control"
+          type="date"
+          name="date"
+          [(ngModel)]="event.date"
+          required
+          #date="ngModel"
+        />
+        <div *ngIf="date.invalid && date.touched" class="text-danger">
+          Date is required.
+        </div>
+      </div>
+  
+      <!-- Event Description -->
+      <div class="form-group">
+        <label for="description">Event Description</label>
+        <textarea
+          id="description"
+          class="form-control"
+          name="description"
+          [(ngModel)]="event.description"
+          required
+          #description="ngModel"
+        ></textarea>
+        <div *ngIf="description.invalid && description.touched" class="text-danger">
+          Description is required.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="eventForm.invalid">Update Event</button>
+    </form>
+  </div>
+  

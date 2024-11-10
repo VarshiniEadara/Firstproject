@@ -1,0 +1,9 @@
+<div class="container mt-4" *ngIf="event">
+    <h3>{{ event.name }}</h3>
+    <p><strong>Date:</strong> {{ event.date | date: 'fullDate' }}</p>
+    <p><strong>Location:</strong> {{ event.location | eventLocation }}</p>
+    <p><strong>Description:</strong> {{ event.description }}</p>
+  
+    <a class="btn btn-secondary mt-3" routerLink="/events">Back to Event List</a>
+  </div>
+  

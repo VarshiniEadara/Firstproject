@@ -1,0 +1,13 @@
+.navbar {
+    margin-bottom: 20px;
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    font-size: 1.1em;
+  }
+  
+  .navbar-nav .nav-item .active {
+    font-weight: bold;
+    color: #007bff;
+  }
+  

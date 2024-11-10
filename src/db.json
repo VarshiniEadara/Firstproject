@@ -1,0 +1,25 @@
+{
+  "events": [
+    {
+      "id": "2",
+      "name": "Music Festival",
+      "location": "Los Angeles",
+      "date": "2024-06-20T18:00:00Z",
+      "description": "An exciting music festival with performances from top artists."
+    },
+    {
+      "id": "3",
+      "name": "Art Exhibition",
+      "location": "San Francisco",
+      "date": "2024-07-10T10:00:00Z",
+      "description": "An art exhibition showcasing contemporary works from global artists."
+    },
+    {
+      "id": "9d5d",
+      "name": "Destination Wedding",
+      "location": "Goa",
+      "date": "2025-06-14",
+      "description": "Abhi weds aadhya"
+    }
+  ]
+}
